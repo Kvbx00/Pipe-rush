@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    font-family: cursive;
+    margin: 0;
+}
+#score{
+    display: inline;
+    width: 50%;
+    background-color: greenyellow;
+}
+
+#bestScore{
+    display: inline;
+    width: 50%;
+    background-color: greenyellow;
+    padding-left: 120px;
+}
+ #info{
+    background-color: greenyellow;
+    width: 959px;
+    text-align: center;
+    margin: auto;
+    font-size: large;
+ }
+
