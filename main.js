@@ -119,7 +119,7 @@ img.onload = render;
 
 // keybind settings
 document.addEventListener('keydown', (event) => {
-    if ((event.code === 'Space' || event.code === 'ArrowUp') && !gameStarted) {
+    if (event.code === 'Space' || event.code === 'ArrowUp') {
         flight = jump;
         gameStarted = true;
         rotateStartTime = Date.now();
@@ -130,5 +130,4 @@ document.addEventListener('click', () => {
     flight = jump;
     gameStarted = true;
     rotateStartTime = Date.now();
- // Zmniejszamy `flight` przy każdym kliknięciu, aby ptaszek podskoczył do góry
 });
