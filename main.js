@@ -22,7 +22,7 @@ let index = 0,
     score,
     pipe,
     birdAngle,
-    rotateStartTime; // czas rozpoczęcia obrotu ptaszka
+    rotateStartTime; 
 
 // pipes settings
 const pipeWidth = 90;
@@ -81,10 +81,10 @@ const render = () => {
     // bird
     if (gameStarted) {
         if (rotateStartTime !== 0 && Date.now() - rotateStartTime < 300) {
-            // Obracaj ptaszka o 45 stopni przez sekundę
+            // rotate bird per sec
             birdAngle = Math.PI / -6;
         } else {
-            // Ptak wraca do poprzedniego stanu obrotu
+            // back to bird position
             birdAngle = -6;
             rotateStartTime = 0;
         }
@@ -95,7 +95,7 @@ const render = () => {
         ctx.restore();
 
         flight += gravitation;
-        flyHeight = Math.max(flyHeight + flight, 0); // Zmieniamy `Math.min` na `Math.max`, aby ptaszek nie spadał poniżej dolnej granicy canvas
+        flyHeight = Math.max(flyHeight + flight, 0);
     } else { // static bird
         ctx.drawImage(img, 1199, 610, ...size, ((canvas.width / 2) - size[0] / 2), flyHeight, ...size);
         flyHeight = (canvas.height / 2) - (size[1] / 2);
